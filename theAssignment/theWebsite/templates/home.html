@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container-fluid p-2 bg-primary text-white text-center">
+        <h1>Dogs</h1>
+    </div>
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Breed Name</th>
+                    <th>Specialty</th>
+                    <th>Temperament</th>
+                    <th>Origin</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dog in dogs %}
+                <tr>
+                    <td>{{ dog.name }}</td>
+                    <td>{{ dog.bred_for }}</td>
+                    <td>{{ dog.temperament }}</td>
+                    <td>{{ dog.origin }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'formPage' %}" class="btn btn-primary">add more</a>
+    </div>
+{% endblock content %}
