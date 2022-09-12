@@ -21,7 +21,6 @@ def dogs(request):
         print("Error:", response.status_code, response.text)
 
 """
-# change name once i've build an api more suitable
 # the post method and the page of the form being rendered
 # basic dropbox api for testing if post works, basically just echos back whatever was in the query
 def echoing(request):
